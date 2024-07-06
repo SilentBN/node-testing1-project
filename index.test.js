@@ -19,7 +19,6 @@ describe("[Exercise 1] trimProperties", () => {
 
 describe("[Exercise 2] trimPropertiesMutation", () => {
   // test('[3] returns an object with the properties trimmed', () => {})
-  // test('[4] the object returned is the exact same one we passed in', () => {})
   test("[3] returns an object with the properties trimmed", () => {
     const input = { foo: "  foo ", bar: "bar ", baz: " baz" };
     const expected = { foo: "foo", bar: "bar", baz: "baz" };
@@ -27,6 +26,7 @@ describe("[Exercise 2] trimPropertiesMutation", () => {
     expect(actual).toEqual(expected);
   });
 
+  // test('[4] the object returned is the exact same one we passed in', () => {})
   test("[4] the object returned is the exact same one we passed in", () => {
     const input = { foo: "  foo ", bar: "bar ", baz: " baz" };
     const actual = utils.trimPropertiesMutation(input);
@@ -49,9 +49,26 @@ describe("[Exercise 4] Counter", () => {
   beforeEach(() => {
     counter = new utils.Counter(3); // each test must start with a fresh couter
   });
+
   // test('[6] the FIRST CALL of counter.countDown returns the initial count', () => {})
+  test("[6] the FIRST CALL of counter.countDown returns the initial count", () => {
+    expect(counter.countDown()).toBe(3);
+  });
+
   // test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {})
+  test("[7] the SECOND CALL of counter.countDown returns the initial count minus one", () => {
+    counter.countDown();
+    expect(counter.countDown()).toBe(2);
+  });
+
   // test('[8] the count eventually reaches zero but does not go below zero', () => {})
+  test("[8] the count eventually reaches zero but does not go below zero", () => {
+    counter.countDown();
+    counter.countDown();
+    counter.countDown();
+    expect(counter.countDown()).toBe(0);
+    expect(counter.countDown()).toBe(0);
+  });
 });
 
 describe("[Exercise 5] Seasons", () => {
