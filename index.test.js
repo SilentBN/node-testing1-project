@@ -77,25 +77,25 @@ describe("[Exercise 5] Seasons", () => {
     seasons = new utils.Seasons(); // each test must start with fresh seasons
   });
   // test('[9] the FIRST call of seasons.next returns "summer"', () => {})
-  test("[9] the FIRST call of seasons.next returns 'summer'", () => {
+  test('[9] the FIRST call of seasons.next returns "summer"', () => {
     expect(seasons.next()).toBe("summer");
   });
 
   // test('[10] the SECOND call of seasons.next returns "fall"', () => {})
-  test("[10] the SECOND call of seasons.next returns 'fall'", () => {
+  test('[10] the SECOND call of seasons.next returns "fall"', () => {
     seasons.next();
     expect(seasons.next()).toBe("fall");
   });
 
   // test('[11] the THIRD call of seasons.next returns "winter"', () => {})
-  test("[11] the THIRD call of seasons.next returns 'winter'", () => {
+  test('[11] the THIRD call of seasons.next returns "winter"', () => {
     seasons.next();
     seasons.next();
     expect(seasons.next()).toBe("winter");
   });
 
   // test('[12] the FOURTH call of seasons.next returns "spring"', () => {})
-  test("[12] the FOURTH call of seasons.next returns 'spring'", () => {
+  test('[12] the FOURTH call of seasons.next returns "spring"', () => {
     seasons.next();
     seasons.next();
     seasons.next();
@@ -103,7 +103,7 @@ describe("[Exercise 5] Seasons", () => {
   });
 
   // test('[13] the FIFTH call of seasons.next returns again "summer"', () => {})
-  test("[13] the FIFTH call of seasons.next returns again 'summer'", () => {
+  test('[13] the FIFTH call of seasons.next returns again "summer"', () => {
     seasons.next();
     seasons.next();
     seasons.next();

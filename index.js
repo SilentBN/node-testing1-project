@@ -105,7 +105,7 @@ class Seasons {
    */
   next() {
     // ✨ implement
-    const season = this.season[this.currentIndex];
+    const season = this.seasons[this.currentIndex];
     this.currentIndex = (this.currentIndex + 1) % 4;
     return season;
   }
