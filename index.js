@@ -188,6 +188,15 @@ class Car {
  */
 function isEvenNumberAsync(number) {
   // ✨ implement
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (typeof number !== "number") {
+        reject(new Error("Input must be a number"));
+      } else {
+        resolve(number % 2 === 0);
+      }
+    }, 1000); // Simulate an async operation with a 1 second delay
+  });
 }
 
 module.exports = {

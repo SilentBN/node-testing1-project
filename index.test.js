@@ -155,5 +155,19 @@ describe("[Exercise 6] Car", () => {
 
 describe("[Exercise 7] isEvenNumberAsync", () => {
   // test('[19] resolves true if passed an even number', () => {})
+  test("[19] resolves true if passed an even number", async () => {
+    await expect(utils.isEvenNumberAsync(2)).resolves.toBe(true);
+  });
+
   // test('[20] resolves false if passed an odd number', () => {})
+  test("[20] resolves false if passed an odd number", async () => {
+    await expect(utils.isEvenNumberAsync(3)).resolves.toBe(false);
+  });
+
+  // test('[21] rejects if passed a non-number', () => {})
+  test("rejects if passed a non-number", async () => {
+    await expect(utils.isEvenNumberAsync("not a number")).rejects.toThrow(
+      "Input must be a number"
+    );
+  });
 });
